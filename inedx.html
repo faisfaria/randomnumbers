@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lottery Numbers</title>
+</head>
+<body>
+
+<h1>Lottery Numbers</h1>
+
+<p>Here are your lottery numbers:</p>
+
+<ul>
+  <li id="number1"></li>
+  <li id="number2"></li>
+  <li id="number3"></li>
+  <li id="number4"></li>
+  <li id="number5"></li>
+  <li id="number6"></li>
+</ul>
+
+<script>
+  const numbers = [];
+  while (numbers.length < 6) {
+    const number = Math.floor(Math.random() * 49) + 1;
+    if (!numbers.includes(number)) {
+      numbers.push(number);
+    }
+  }
+
+  document.getElementById("number1").innerHTML = numbers[0];
+  document.getElementById("number2").innerHTML = numbers[1];
+  document.getElementById("number3").innerHTML = numbers[2];
+  document.getElementById("number4").innerHTML = numbers[3];
+  document.getElementById("number5").innerHTML = numbers[4];
+  document.getElementById("number6").innerHTML = numbers[5];
+</script>
+
+</body>
+</html>
